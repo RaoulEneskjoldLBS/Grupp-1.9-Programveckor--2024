@@ -1,42 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class playermovment : MonoBehaviour
 {
 
-
-    Rigidbody2D playerrigidbody;
-
-
+    public float moveSpeed = 5f;
+    private Rigidbody2D rb;
 
     // Start is called before the first frame update
      void Start()
     {
-        playerrigidbody = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.D))
-        {
-            playerrigidbody.AddForce(new Vector2(1, 0));
-        }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            playerrigidbody.AddForce(new Vector2(-1, 0));
-        }
+        
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            playerrigidbody.AddForce(new Vector2(0, 1));
-        }
+       
+        Vector3 movement = new Vector3(horizontal, vertical, 0f);
+        
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            playerrigidbody.AddForce(new Vector2(0, -1));
-        }
+        transform.position += movement * moveSpeed * Time.deltaTime;
     }
 }
