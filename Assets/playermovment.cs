@@ -7,26 +7,26 @@ public class playermovment : MonoBehaviour
 {
 
     public float moveSpeed = 5f;
+    public float sprintSpeed = 10f; 
     private Rigidbody2D rb;
 
-    // Start is called before the first frame update
-     void Start()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
-        
+     
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-       
-        Vector3 movement = new Vector3(horizontal, vertical, 0f);
-        
+        bool isSprinting = Input.GetKey(KeyCode.LeftShift);
 
-        transform.position += movement * moveSpeed * Time.deltaTime;
+        Vector2 movement = new Vector2(horizontal, vertical);
+
+        float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
+
+        rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
     }
 }
