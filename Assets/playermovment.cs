@@ -19,15 +19,14 @@ public class playermovment : MonoBehaviour
     void Update()
     {
 
-        // Get input from the player
+        
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
-        // Calculate the movement vector
+       
         Vector3 movement = new Vector3(horizontal, vertical, 0f);
-        movement.Normalize(); // Normalize to ensure diagonal movement is not faster
+        
 
-        // Move the player directly by manipulating the position
         transform.position += movement * moveSpeed * Time.deltaTime;
     }
 }
