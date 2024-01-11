@@ -23,7 +23,9 @@ public class playermovment : MonoBehaviour
     {
        
         float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float vertical = Input.GetAxis("Vertical"));
+
+        
 
         bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
@@ -42,6 +44,9 @@ public class playermovment : MonoBehaviour
         
         rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
+        float horizontalmove = Input.GetAxisRaw("horizontal") * moveSpeed;
+
+        Animator.SetFloat("Speed", Mathf.Abs(horizontalmove));
     }
 
     void Punch()
