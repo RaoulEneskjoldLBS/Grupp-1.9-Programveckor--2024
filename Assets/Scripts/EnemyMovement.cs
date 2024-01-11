@@ -17,31 +17,31 @@ public class EnemyAI : MonoBehaviour
     void Start()
 
     {
-       // player = GameObject.FindGameObjectWithTag("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
 
-        //rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
     void Update()
 
     {
 
-       // if (Vector2.Distance(transform.position, player.position) < detectionRange)
+        if (Vector2.Distance(transform.position, player.position) < detectionRange)
 
-        //{
-           // Vector2 direction = player.position - transform.position;
-            //rb.velocity = direction.normalized * speed;
-       // }
-       // else
+        {
+            Vector2 direction = player.position - transform.position;
+            rb.velocity = direction.normalized * speed;
+        }
+        else
 
-       // {
-            //rb.velocity = Vector2.zero;
-       // }
+        {
+            rb.velocity = Vector2.zero;
+        }
         void Start()
 
         {
-            //player = GameObject.FindGameObjectWithTag("Player").transform;
+            player = GameObject.FindGameObjectWithTag("Player").transform;
 
-           // rb = GetComponent<Rigidbody2D>();
+            rb = GetComponent<Rigidbody2D>();
         }
 
     }
