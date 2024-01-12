@@ -25,7 +25,7 @@ public class saves : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    public void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -49,7 +49,7 @@ public class saves : MonoBehaviour
 
 
         if (horizontalmove >= 1 && Input.GetKeyDown(KeyCode.D));
-        {
+        { 
             animator.SetBool("D", true);
         }
         
