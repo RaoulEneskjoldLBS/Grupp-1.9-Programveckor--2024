@@ -27,10 +27,7 @@ public class playermovment : MonoBehaviour
 
         bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Punch();
-        }
+
 
  
         Vector2 movement = new Vector2(horizontal, vertical);
@@ -45,10 +42,6 @@ public class playermovment : MonoBehaviour
     }
 
     
-    void Punch()
-    {
-        
-       
-    }
+ 
 }
 
