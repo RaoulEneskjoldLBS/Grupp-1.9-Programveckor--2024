@@ -8,18 +8,25 @@ public class Playerpunch : MonoBehaviour
     public Transform shootPoint;
     public float shootForce = 10f;
     public float timeBetweenShots = 0.5f;
-    public float projectileLifetime = 5f;
+    public float projectileLifetime = 3f; 
+
     private float timer = 0f;
+    private Vector2 lastInputDirection = Vector2.right; 
 
     void Update()
     {
-       
         timer += Time.deltaTime;
 
-        
-        if (Input.GetKey(KeyCode.Space) && timer >= timeBetweenShots)
+        float horizontal = Input.GetAxis("Horizontal");
+        float vertical = Input.GetAxis("Vertical");
+
+        if (horizontal != 0f || vertical != 0f)
         {
-          
+            lastInputDirection = new Vector2(horizontal, vertical).normalized;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && timer >= timeBetweenShots)
+        {
             Shoot();
             timer = 0f; 
         }
@@ -27,20 +34,22 @@ public class Playerpunch : MonoBehaviour
 
     void Shoot()
     {
+        float angle = Mathf.Atan2(lastInputDirection.y, lastInputDirection.x) * Mathf.Rad2Deg;
 
-      
-        Quaternion playerRotation = transform.rotation;
+        Vector2 spawnOffset = lastInputDirection * 0.5f; 
 
-       
-        GameObject projectile = Instantiate(projectilePrefab, shootPoint.position, playerRotation);
+        Vector2 spawnPosition = (Vector2)shootPoint.position + spawnOffset;
 
-      
+        GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.Euler(0f, 0f, angle));
+
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
         if (projectileRb != null)
         {
-            projectileRb.AddForce(shootPoint.right * shootForce, ForceMode2D.Impulse);
+            lastInputDirection.Normalize();
+            projectileRb.AddForce(lastInputDirection * shootForce, ForceMode2D.Impulse);
         }
 
         Destroy(projectile, projectileLifetime);
+
     }
 }
