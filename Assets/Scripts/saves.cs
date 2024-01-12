@@ -13,10 +13,10 @@ public class saves : MonoBehaviour
     // Update is called once per frame
     void Update(Animator animator)
     {
-       
-       
 
-            float horizontalmove = Input.GetAxisRaw("horizontal") * moveSpeed;
+
+
+        float horizontalmove = Input.GetAxisRaw("horizontal"); //* moveSpeed;
 
             animator.SetFloat("Speed", Mathf.Abs(horizontalmove));
         
