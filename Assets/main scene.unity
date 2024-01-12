@@ -896,6 +896,7 @@ GameObject:
   m_Layer: 0
   m_Name: EventSystem
 =======
+
   - component: {fileID: 1669096163}
   - component: {fileID: 1669096164}
   m_Layer: 0
@@ -944,8 +945,10 @@ MonoBehaviour:
   m_DragThreshold: 10
 --- !u!4 &1533593548
 =======
+
 --- !u!4 &1669096163
 >>>>>>> 2cc723c13b6825f3fea6524a28ab7909a8b78763
+ 2cc723c13b6825f3fea6524a28ab7909a8b78763
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -961,7 +964,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
+
   m_GameObject: {fileID: 1669096162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
@@ -1210,6 +1213,7 @@ GameObject:
 
   - component: {fileID: 2074015281}
 =======
+
   - component: {fileID: 2074015283}
   - component: {fileID: 2074015282}
   - component: {fileID: 2074015281}
