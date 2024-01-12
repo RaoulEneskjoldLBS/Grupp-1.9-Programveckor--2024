@@ -19,11 +19,11 @@ public class playermovment : MonoBehaviour
         
     }
 
-    void Update()
+    public void Update()
     {
        
         float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical"));
+        float vertical = Input.GetAxis("Vertical");
 
         
 
@@ -44,10 +44,19 @@ public class playermovment : MonoBehaviour
         
         rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
+        
+
+       
+    }
+
+    public void Update(Animator animator)
+    {
+
         float horizontalmove = Input.GetAxisRaw("horizontal") * moveSpeed;
 
-        Animator.SetFloat("Speed", Mathf.Abs(horizontalmove));
+        animator.SetFloat("Speed", Mathf.Abs(horizontalmove));
     }
+
 
     void Punch()
     {
