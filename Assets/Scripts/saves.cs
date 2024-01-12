@@ -1,54 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
-public class playermovment : MonoBehaviour
+public class saves : MonoBehaviour
 {
 
- 
     public float moveSpeed = 5f;
     public float sprintSpeed = 10f;
-    public float punchForce = 10f; 
+    public float punchForce = 10f;
     private Rigidbody2D rb;
+
+    Animator animator;
+
+
     
 
+
+    // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+
+
     }
 
-    void Update()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-       
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
 
         bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            Punch();
-        }
 
- 
         Vector2 movement = new Vector2(horizontal, vertical);
         movement.Normalize();
 
-      
+
         float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
 
-        
+
         rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
-    }
 
-    
-    void Punch()
-    {
-        
-       
+        float horizontalmove = Input.GetAxisRaw("horizontal") * moveSpeed;
+
+        animator.SetFloat("run", Mathf.Abs(horizontalmove));
+
+
+        if (horizontalmove <= 5) ; Input.GetKey(KeyCode.D);
+        {
+            animator.SetBool("D", true);
+        }
+
     }
 }
-
