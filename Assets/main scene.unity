@@ -895,7 +895,6 @@ GameObject:
   - component: {fileID: 1533593546}
   m_Layer: 0
   m_Name: EventSystem
-=======
 
   - component: {fileID: 1669096163}
   - component: {fileID: 1669096164}
@@ -944,10 +943,8 @@ MonoBehaviour:
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &1533593548
-=======
 
 --- !u!4 &1669096163
->>>>>>> 2cc723c13b6825f3fea6524a28ab7909a8b78763
  2cc723c13b6825f3fea6524a28ab7909a8b78763
 Transform:
   m_ObjectHideFlags: 0
@@ -1212,7 +1209,6 @@ GameObject:
   - component: {fileID: 2074015280}
 
   - component: {fileID: 2074015281}
-=======
 
   - component: {fileID: 2074015283}
   - component: {fileID: 2074015282}
