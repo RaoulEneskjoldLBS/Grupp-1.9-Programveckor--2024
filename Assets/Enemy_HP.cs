@@ -20,7 +20,7 @@ public class Enemy_HP : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        if(collision.gameObject.tag == "Player") //Change "Player" to "Projectile" when projectile object exists
+        if(collision.gameObject.tag == "FIst")
         {
             Enemy_Take_Damage(50);
         }
