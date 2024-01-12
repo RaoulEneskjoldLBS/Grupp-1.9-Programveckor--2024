@@ -52,6 +52,7 @@ public class saves : MonoBehaviour
         {
             animator.SetBool("D", true);
         }
+        
         if (horizontalmove < 1 && Input.GetKeyUp(KeyCode.D));
         {
             animator.SetBool("D", false);
