@@ -20,7 +20,7 @@ public class saves : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        animator = GetComponent<Animator>();
 
     }
 
