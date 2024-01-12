@@ -170,7 +170,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &187032156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 9141463243800127131, guid: 7828065ceeb0eb6478c20f1f0727c638, type: 3}
   shootPoint: {fileID: 187032158}
   shootForce: 10
-  timeBetweenShots: 0.75
+  timeBetweenShots: 0.5
   projectileLifetime: 0.5
 --- !u!1 &977832365
 GameObject:
@@ -417,9 +417,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1007851923}
   - component: {fileID: 1007851922}
-  - component: {fileID: 1007851921}
   - component: {fileID: 1007851920}
   - component: {fileID: 1007851919}
+  - component: {fileID: 1007851924}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -499,20 +499,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1007851921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007851918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 477bff16495d73843a53d50079cc93d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  detectionRange: 10
 --- !u!212 &1007851922
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -580,6 +566,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1007851924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007851918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  detectionRange: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
