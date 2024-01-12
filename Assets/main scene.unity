@@ -416,8 +416,6 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 318186007}
   m_SourcePrefab: {fileID: -8435245712485981826, guid: 0c76b4eeb10cb3749964d24281802ecb, type: 3}
-=======
->>>>>>> 2cc723c13b6825f3fea6524a28ab7909a8b78763
 
 
 --- !u!1 &861368307
@@ -779,7 +777,6 @@ BoxCollider2D:
   m_EdgeRadius: 0
 
 --- !u!1 &1465838487
-=======
 
 --- !u!1 &1669096162
 >>>>>>> 2cc723c13b6825f3fea6524a28ab7909a8b78763
@@ -1317,7 +1314,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d9a400703362604da21625c4fedcf60, type: 3}
-=======
 
   m_Enabled: 1
   m_EditorHideFlags: 0
