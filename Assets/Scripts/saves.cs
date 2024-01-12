@@ -25,7 +25,7 @@ public class saves : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    public void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -43,15 +43,16 @@ public class saves : MonoBehaviour
         rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
 
-        float horizontalmove = Input.GetAxisRaw("horizontal") * moveSpeed;
+        float horizontalmove = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
         animator.SetFloat("run", Mathf.Abs(horizontalmove));
 
 
         if (horizontalmove >= 1 && Input.GetKeyDown(KeyCode.D));
-        {
+        { 
             animator.SetBool("D", true);
         }
+        
         if (horizontalmove < 1 && Input.GetKeyUp(KeyCode.D));
         {
             animator.SetBool("D", false);
