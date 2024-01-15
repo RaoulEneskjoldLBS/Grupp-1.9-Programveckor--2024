@@ -43,17 +43,17 @@ public class saves : MonoBehaviour
         rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
 
-        float horizontalmove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        float horizontalmove = Input.GetAxisRaw("Horizontal") * currentSpeed;
 
         animator.SetFloat("run", Mathf.Abs(horizontalmove));
 
 
-        if (horizontalmove >= 1 && Input.GetKeyDown(KeyCode.D));
+        if (horizontalmove >= 1 && Input.GetKeyDown(KeyCode.D))
         { 
             animator.SetBool("D", true);
         }
         
-        if (horizontalmove < 1 && Input.GetKeyUp(KeyCode.D));
+        if (horizontalmove < 1 && Input.GetKeyUp(KeyCode.D))
         {
             animator.SetBool("D", false);
         }
