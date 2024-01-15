@@ -74,5 +74,30 @@ public class saves : MonoBehaviour
         {
             animator.SetBool("A", false);
         }
+
+
+        float verticalmove = Input.GetAxisRaw("Vertical") * currentSpeed;
+
+        animator.SetFloat("runv", Mathf.Abs(verticalmove));
+
+        if (verticalmove >= 1 && Input.GetKeyDown(KeyCode.W))
+        {
+            animator.SetBool("W", true);
+        }
+
+        if (verticalmove < 1 && Input.GetKeyUp(KeyCode.W))
+        {
+            animator.SetBool("W", false);
+        }
+
+        if (verticalmove <= -1 && Input.GetKeyDown(KeyCode.S))
+        {
+            animator.SetBool("S", true);
+        }
+
+        if (verticalmove > -1 && Input.GetKeyUp(KeyCode.S))
+        {
+            animator.SetBool("S", false);
+        }
     }
 }
