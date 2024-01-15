@@ -174,7 +174,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   sprintSpeed: 10
-  punchForce: 10
 --- !u!95 &243919736
 Animator:
   serializedVersion: 5
@@ -185,7 +184,7 @@ Animator:
   m_GameObject: {fileID: 243919733}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: -5237929681408240651, guid: 0c76b4eeb10cb3749964d24281802ecb, type: 3}
+  m_Controller: {fileID: 9100000, guid: 36bdf8a0a8b430a4695df18447c26c46, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

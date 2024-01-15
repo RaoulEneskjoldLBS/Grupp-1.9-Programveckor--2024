@@ -9,7 +9,7 @@ public class playermovment : MonoBehaviour
  
     public float moveSpeed = 5f;
     public float sprintSpeed = 10f;
-    public float punchForce = 10f; 
+    
     private Rigidbody2D rb;
     
 
