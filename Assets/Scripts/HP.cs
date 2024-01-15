@@ -32,17 +32,8 @@ public class HP : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel);
         }
-
-
-
+   
         
-          
-        
-        
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Healing(10);
-        }
     }
 
     
@@ -55,13 +46,6 @@ public class HP : MonoBehaviour
 
     }
 
-    public void Healing(float healthpoints)
-    {
-        Health_ammount += healthpoints;
-        Health_ammount = Mathf.Clamp(Health_ammount, 0, 100);
 
-        HealthBar.fillAmount = Health_ammount / 100;
-    }
-        
 
 }
