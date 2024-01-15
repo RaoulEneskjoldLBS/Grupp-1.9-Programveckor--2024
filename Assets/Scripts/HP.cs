@@ -24,6 +24,10 @@ public class HP : MonoBehaviour
         {
             TakeDamage(20);
         }
+        else if(collision.gameObject.tag == "Healing")
+        {
+            Heal(20);
+        }
     }
 
     private void Update()
@@ -41,11 +45,20 @@ public class HP : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         
-        Health_ammount -= Damage;
+        Health_ammount -= Damage;      
         HealthBar.fillAmount = Health_ammount / 100;
 
     }
 
+    public void Heal(float health_points)
+    {
+        Health_ammount += health_points;
+        Health_ammount = Mathf.Clamp(Health_ammount, 0, 100);
+
+        HealthBar.fillAmount = Health_ammount / 100;
+    }
+
+   
 
 
 }
