@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class HP : MonoBehaviour
 {
     public Image HealthBar;
+    public Image HealthBar_Background;
     public float Health_ammount = 100;
     public GameObject Player;
     public Rigidbody2D rB;
