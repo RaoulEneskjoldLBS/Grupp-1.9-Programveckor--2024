@@ -12,7 +12,7 @@ public class saves : MonoBehaviour
 
     Animator animator;
 
-
+    SpriteRenderer sr;
     
 
 
@@ -56,6 +56,14 @@ public class saves : MonoBehaviour
         if (horizontalmove < 1 && Input.GetKeyUp(KeyCode.D))
         {
             animator.SetBool("D", false);
+        }
+
+        if (horizontalmove < 0)
+        {
+            sr.flipX = true;
+        } else
+        {
+            sr.flipX = false;
         }
     }
 }
