@@ -21,7 +21,7 @@ public class saves : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -64,6 +64,15 @@ public class saves : MonoBehaviour
         } else
         {
             sr.flipX = false;
+        }
+        if (horizontalmove <= -1 && Input.GetKeyDown(KeyCode.A))
+        {
+            animator.SetBool("A", true);
+        }
+
+        if (horizontalmove > -1 && Input.GetKeyUp(KeyCode.A))
+        {
+            animator.SetBool("A", false);
         }
     }
 }
