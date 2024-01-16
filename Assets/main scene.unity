@@ -279,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &149161280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,7 +287,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149161279}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3eb6ece7d830a4743839629952033d6e, type: 3}
   m_Name: 
@@ -325,7 +325,7 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
   m_HideEditorLogs: 0
-  m_NavMeshData: {fileID: 23800000, guid: ea7f3b013378f6c4fb1d2de9d01010d1, type: 2}
+  m_NavMeshData: {fileID: 0}
 --- !u!4 &149161282
 Transform:
   m_ObjectHideFlags: 0
@@ -1520,7 +1520,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5b61fd2f67a38248a81821d14f49602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_OverrideArea: 0
+  m_OverrideArea: 1
   m_Area: 0
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
@@ -1633,6 +1633,42 @@ MonoBehaviour:
   m_Area: 1
   m_IgnoreFromBuild: 0
   m_AffectedAgents: ffffffff
+--- !u!1 &1384107016 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4245894285751427914, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
+  m_PrefabInstance: {fileID: 1978608177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1384107021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1384107016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: c78958b6b8883cf41b38253284a2ba0d, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &1432138761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6071871839920530300, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
@@ -1943,9 +1979,7 @@ GameObject:
   - component: {fileID: 1612954175}
   - component: {fileID: 1612954174}
   - component: {fileID: 1612954173}
-  - component: {fileID: 1612954177}
   - component: {fileID: 1612954176}
-  - component: {fileID: 1612954178}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2036,47 +2070,33 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &1612954176
-MonoBehaviour:
+--- !u!50 &1612954176
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612954171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemy_Health_Ammount: 100
-  Enemy: {fileID: 0}
-  E_rb: {fileID: 0}
---- !u!114 &1612954177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612954171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
-  initialDetectionRange: 10
---- !u!114 &1612954178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612954171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9c59a1294e277469301ac4d7adf2f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1660390378 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8241783451759921599, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
@@ -2409,6 +2429,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1871913039}
   - component: {fileID: 1871913040}
+  - component: {fileID: 1871913041}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -2483,6 +2504,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1871913041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1871913038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42b8d1d272822a944855c46453bb6a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_BuildHeightMesh: 0
+  m_HideEditorLogs: 0
+  m_NavMeshData: {fileID: 0}
 --- !u!1 &1873368932 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6287523243364515172, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
@@ -3082,6 +3133,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4245894285751427914, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1384107021}
     - targetCorrespondingSourceObject: {fileID: 6362999239185751845, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 719047977}
@@ -3268,7 +3322,6 @@ GameObject:
   - component: {fileID: 2000023933}
   - component: {fileID: 2000023935}
   - component: {fileID: 2000023934}
-  - component: {fileID: 2000023936}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -3362,21 +3415,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000023928}
   m_CullTransparentMesh: 1
---- !u!114 &2000023934
-MonoBehaviour:
+--- !u!50 &2000023934
+Rigidbody2D:
+  serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000023928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Enemy_Health_Ammount: 100
-  Enemy: {fileID: 0}
-  E_rb: {fileID: 0}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!114 &2000023935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3386,23 +3451,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2000023928}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Script: {fileID: 11500000, guid: 884839f3e6633b54091c3bebd287649d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  initialDetectionRange: 10
---- !u!114 &2000023936
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000023928}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef9c59a1294e277469301ac4d7adf2f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  target: {fileID: 243919738}
+  smoothSpeed: 0.125
 --- !u!1 &2003969759 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2141917954275256444, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
