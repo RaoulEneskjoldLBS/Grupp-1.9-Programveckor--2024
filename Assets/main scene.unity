@@ -205,6 +205,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 108411216}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 108411219}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &108411214 stripped
 Transform:
@@ -288,6 +291,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &108411218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,6 +307,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 108411215}
   E_rb: {fileID: 108411217}
+--- !u!114 &108411219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108411215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &144898428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -380,6 +398,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 144898431}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 144898434}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &144898429 stripped
 Transform:
@@ -463,6 +484,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &144898433
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -478,6 +500,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 144898430}
   E_rb: {fileID: 144898432}
+--- !u!114 &144898434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 144898430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!4 &214207258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8227266869974070783, guid: 60610e8052002c648949594573597b33, type: 3}
@@ -734,9 +770,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 9141463243800127131, guid: 7828065ceeb0eb6478c20f1f0727c638, type: 3}
   shootPoint: {fileID: 0}
+  shootPoint: {fileID: 243919738}
   shootForce: 10
   timeBetweenShots: 0.5
   projectileLifetime: 3
+  projectileLifetime: 0.5
 --- !u!1 &247110815
 GameObject:
   m_ObjectHideFlags: 0
@@ -968,6 +1006,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 306515503}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 306515506}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &306515501 stripped
 Transform:
@@ -1050,7 +1091,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &306515505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1066,6 +1107,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 306515502}
   E_rb: {fileID: 306515504}
+--- !u!114 &306515506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 306515502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &309367260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1143,6 +1198,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 309367263}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 309367266}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &309367261 stripped
 Transform:
@@ -1225,7 +1283,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &309367265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1241,6 +1299,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 309367262}
   E_rb: {fileID: 309367264}
+--- !u!114 &309367266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309367262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!4 &423619286 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8227266869974070783, guid: 60610e8052002c648949594573597b33, type: 3}
@@ -1299,11 +1371,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8227266869974070783, guid: 60610e8052002c648949594573597b33, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.5
+      value: -1.11
       objectReference: {fileID: 0}
     - target: {fileID: 8227266869974070783, guid: 60610e8052002c648949594573597b33, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.3
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 8227266869974070783, guid: 60610e8052002c648949594573597b33, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1419,6 +1491,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 637237378}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 637237381}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &637237376 stripped
 Transform:
@@ -1501,7 +1576,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &637237380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1517,6 +1592,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 637237377}
   E_rb: {fileID: 637237379}
+--- !u!114 &637237381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637237377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &683715791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1594,6 +1683,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 683715794}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 683715797}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &683715792 stripped
 Transform:
@@ -1676,7 +1768,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &683715796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1692,6 +1784,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 683715793}
   E_rb: {fileID: 683715795}
+--- !u!114 &683715797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683715793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!4 &750625799 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8227266869974070783, guid: 60610e8052002c648949594573597b33, type: 3}
@@ -1831,6 +1937,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthBar
       objectReference: {fileID: 0}
+    - target: {fileID: 2994549387235043861, guid: f911f03348744f844ac19fda5e6b3fcb, type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3486559268863649383, guid: f911f03348744f844ac19fda5e6b3fcb, type: 3}
       propertyPath: m_Color.b
       value: 0.14509802
@@ -1842,6 +1952,10 @@ PrefabInstance:
     - target: {fileID: 3486559268863649383, guid: f911f03348744f844ac19fda5e6b3fcb, type: 3}
       propertyPath: m_Color.r
       value: 0.18653364
+      objectReference: {fileID: 0}
+    - target: {fileID: 3486559268863649383, guid: f911f03348744f844ac19fda5e6b3fcb, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3916666919476420426, guid: f911f03348744f844ac19fda5e6b3fcb, type: 3}
       propertyPath: m_Pivot.x
@@ -2010,6 +2124,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 982323022}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 982323025}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &982323020 stripped
 Transform:
@@ -2092,7 +2209,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &982323024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2108,6 +2225,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 982323021}
   E_rb: {fileID: 982323023}
+--- !u!114 &982323025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 982323021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &1070497407
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2185,6 +2316,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1070497410}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1070497413}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &1070497408 stripped
 Transform:
@@ -2267,7 +2401,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1070497412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,6 +2417,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1070497409}
   E_rb: {fileID: 1070497411}
+--- !u!114 &1070497413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070497409}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &1080984645
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2360,6 +2508,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1080984648}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1080984651}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &1080984646 stripped
 Transform:
@@ -2442,7 +2593,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1080984650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2458,6 +2609,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1080984647}
   E_rb: {fileID: 1080984649}
+--- !u!114 &1080984651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080984647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1 &1106315270
 GameObject:
   m_ObjectHideFlags: 0
@@ -2789,81 +2954,6 @@ Transform:
   - {fileID: 2003586176}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1422773747
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1422773748}
-  - component: {fileID: 1422773750}
-  - component: {fileID: 1422773749}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1422773748
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422773747}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1612954172}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -199.53, y: 144.03}
-  m_SizeDelta: {x: 326.33, y: 26.866}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1422773749
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422773747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 7482667652216324306, guid: dfdbd5d43e2b892468ba36c63843be7d, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1422773750
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1422773747}
-  m_CullTransparentMesh: 1
 --- !u!1001 &1443238184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2941,6 +3031,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1443238187}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1443238190}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &1443238185 stripped
 Transform:
@@ -3023,7 +3116,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1443238189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,6 +3132,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1443238186}
   E_rb: {fileID: 1443238188}
+--- !u!114 &1443238190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1443238186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &1472205668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3246,6 +3353,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1504159746}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1504159749}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &1504159744 stripped
 Transform:
@@ -3328,7 +3438,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1504159748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3344,6 +3454,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1504159745}
   E_rb: {fileID: 1504159747}
+--- !u!114 &1504159749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504159745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &1504645615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3568,7 +3692,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 585728871}
-  - {fileID: 1422773748}
   m_Father: {fileID: 243919738}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -3981,6 +4104,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1810225137}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1810225140}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &1810225135 stripped
 Transform:
@@ -4063,7 +4189,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1810225139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4079,6 +4205,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1810225136}
   E_rb: {fileID: 1810225138}
+--- !u!114 &1810225140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810225136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1 &1827420476 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
@@ -4176,6 +4316,20 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3453397355983004826, guid: 6d12564e970ac3a4188a913984059923, type: 3}
   m_PrefabInstance: {fileID: 2866636210276573230}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1827420482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1827420476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &1842190623
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4318,6 +4472,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1843354661}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1843354664}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &1843354659 stripped
 Transform:
@@ -4400,7 +4557,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &1843354663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4416,6 +4573,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1843354660}
   E_rb: {fileID: 1843354662}
+--- !u!114 &1843354664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843354660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!4 &1854837253 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2556532322459562970, guid: 1441380c22c93a34eb7dd7e55c147b5f, type: 3}
@@ -5498,6 +5669,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2035288509}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2035288512}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &2035288507 stripped
 Transform:
@@ -5580,7 +5754,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &2035288511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5596,6 +5770,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 2035288508}
   E_rb: {fileID: 2035288510}
+--- !u!114 &2035288512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2035288508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &2053440415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5673,6 +5861,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2053440418}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2053440421}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &2053440416 stripped
 Transform:
@@ -5755,7 +5946,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &2053440420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5771,6 +5962,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 2053440417}
   E_rb: {fileID: 2053440419}
+--- !u!114 &2053440421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053440417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1 &2053845113
 GameObject:
   m_ObjectHideFlags: 0
@@ -5981,6 +6186,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2131946979}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2131946982}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!4 &2131946977 stripped
 Transform:
@@ -6063,7 +6271,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 7
+  m_Constraints: 4
 --- !u!114 &2131946981
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6079,6 +6287,20 @@ MonoBehaviour:
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 2131946978}
   E_rb: {fileID: 2131946980}
+--- !u!114 &2131946982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2131946978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a0fee8389df5d140b72551303b75e15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  initialDetectionRange: 10
 --- !u!1001 &265885008638983897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6213,6 +6435,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1827420477}
+    - targetCorrespondingSourceObject: {fileID: 2298089533636493944, guid: 6d12564e970ac3a4188a913984059923, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1827420482}
   m_SourcePrefab: {fileID: 100100000, guid: 6d12564e970ac3a4188a913984059923, type: 3}
 --- !u!1001 &7155732722337756876
 PrefabInstance:
