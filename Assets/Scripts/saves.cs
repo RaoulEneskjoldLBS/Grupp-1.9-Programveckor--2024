@@ -12,7 +12,7 @@ public class saves : MonoBehaviour
 
     Animator animator;
 
-
+    SpriteRenderer sr;
     
 
 
@@ -20,12 +20,12 @@ public class saves : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
-
+        animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    public void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
@@ -43,18 +43,61 @@ public class saves : MonoBehaviour
         rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
 
-        float horizontalmove = Input.GetAxisRaw("Horizontal") * moveSpeed;
+        float horizontalmove = Input.GetAxisRaw("Horizontal") * currentSpeed;
 
         animator.SetFloat("run", Mathf.Abs(horizontalmove));
 
 
-        if (horizontalmove >= 1 && Input.GetKeyDown(KeyCode.D));
-        {
+        if (horizontalmove >= 1 && Input.GetKeyDown(KeyCode.D))
+        { 
             animator.SetBool("D", true);
         }
-        if (horizontalmove < 1 && Input.GetKeyUp(KeyCode.D));
+        
+        if (horizontalmove < 1 && Input.GetKeyUp(KeyCode.D))
         {
             animator.SetBool("D", false);
+        }
+
+        if (horizontalmove <= -1)
+        {
+            sr.flipX = true;
+        } else if (horizontalmove >=1)
+        {
+            sr.flipX = false;
+        }
+        if (horizontalmove <= -1 && Input.GetKeyDown(KeyCode.A))
+        {
+            animator.SetBool("A", true);
+        }
+
+        if (horizontalmove > -1 && Input.GetKeyUp(KeyCode.A))
+        {
+            animator.SetBool("A", false);
+        }
+
+
+        float verticalmove = Input.GetAxisRaw("Vertical") * currentSpeed;
+
+        animator.SetFloat("runv", Mathf.Abs(verticalmove));
+
+        if (verticalmove >= 1 && Input.GetKeyDown(KeyCode.W))
+        {
+            animator.SetBool("W", true);
+        }
+
+        if (verticalmove < 1 && Input.GetKeyUp(KeyCode.W))
+        {
+            animator.SetBool("W", false);
+        }
+
+        if (verticalmove <= -1 && Input.GetKeyDown(KeyCode.S))
+        {
+            animator.SetBool("S", true);
+        }
+
+        if (verticalmove > -1 && Input.GetKeyUp(KeyCode.S))
+        {
+            animator.SetBool("S", false);
         }
     }
 }
