@@ -100,7 +100,7 @@ public class saves : MonoBehaviour
             animator.SetBool("S", false);
         } 
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             animator.SetBool("Dodge", true);
 
