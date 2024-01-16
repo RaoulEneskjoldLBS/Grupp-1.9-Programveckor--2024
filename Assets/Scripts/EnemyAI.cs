@@ -14,7 +14,6 @@ public class EnemyAI : MonoBehaviour
     private Transform player;
     private Rigidbody2D rb;
 
-
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;

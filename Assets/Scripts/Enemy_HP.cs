@@ -17,7 +17,6 @@ public class Enemy_HP : MonoBehaviour
         E_rb = GetComponent<Rigidbody2D>();
     }
 
-    //Enemy takes damage
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
@@ -29,7 +28,7 @@ public class Enemy_HP : MonoBehaviour
 
     void Update()
     {
-        //Enemy death
+        
         if(Enemy_Health_Ammount <= 0)
         {
             Destroy(gameObject);
