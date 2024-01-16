@@ -19,6 +19,7 @@ public class HP : MonoBehaviour
         rB = GetComponent<Rigidbody2D>();
     }
 
+    //Checks what object player collides with
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Enemy")
@@ -31,6 +32,7 @@ public class HP : MonoBehaviour
         }
     }
 
+    //Death when HP = 0
     private void Update()
     {
         if (Health_ammount <= 0)
@@ -42,7 +44,7 @@ public class HP : MonoBehaviour
     }
 
     
-
+    //Damage
     public void TakeDamage(float Damage)
     {
         
@@ -51,6 +53,7 @@ public class HP : MonoBehaviour
 
     }
 
+    //Healing
     public void Heal(float health_points)
     {
         Health_ammount += health_points;
