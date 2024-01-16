@@ -1429,7 +1429,7 @@ Transform:
   m_GameObject: {fileID: 410491376}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.11, y: -0.08, z: 0}
+  m_LocalPosition: {x: 0.7, y: -0.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1710,7 +1710,7 @@ GameObject:
   - component: {fileID: 531111055}
   m_Layer: 0
   m_Name: Key (2)
-  m_TagString: Pickup
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1724,7 +1724,7 @@ Transform:
   m_GameObject: {fileID: 531111051}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 63.5, y: 80.8, z: 0.08649872}
+  m_LocalPosition: {x: 63.499996, y: 80.8, z: 0.08649872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1742,6 +1742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67de4d127a70a5a4f96e48c871e7ae37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bosswall: {fileID: 1184174041}
 --- !u!212 &531111054
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2413,6 +2414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67de4d127a70a5a4f96e48c871e7ae37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bosswall: {fileID: 1184174041}
 --- !u!1 &805259830
 GameObject:
   m_ObjectHideFlags: 0
@@ -2834,6 +2836,7 @@ GameObject:
   - component: {fileID: 1184174040}
   - component: {fileID: 1184174039}
   - component: {fileID: 1184174038}
+  - component: {fileID: 1184174041}
   m_Layer: 0
   m_Name: Boss wall
   m_TagString: Untagged
@@ -2953,6 +2956,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1184174041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184174036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c192bb8a79a956e43bbff9b89556e328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredPickups: 3
+  pickupsCollected: 0
 --- !u!1 &1338999050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2966,7 +2983,6 @@ GameObject:
   - component: {fileID: 1338999054}
   - component: {fileID: 1338999055}
   - component: {fileID: 1338999056}
-  - component: {fileID: 1338999057}
   m_Layer: 0
   m_Name: Teleport
   m_TagString: Untagged
@@ -3114,19 +3130,6 @@ Rigidbody2D:
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!114 &1338999056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1338999050}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5726f4098bc81cd4ebaf4821c520a574, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  teleportCoordinates: {x: 0, y: 0}
---- !u!114 &1338999057
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3764,11 +3767,10 @@ GameObject:
   - component: {fileID: 1815294791}
   - component: {fileID: 1815294793}
   - component: {fileID: 1815294792}
-  - component: {fileID: 1815294794}
   - component: {fileID: 1815294795}
   m_Layer: 0
   m_Name: Key (3)
-  m_TagString: Pickup
+  m_TagString: Undefined
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3912,20 +3914,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1815294794
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815294788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c192bb8a79a956e43bbff9b89556e328, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requiredPickups: 3
-  wallToDestroy: {fileID: 1184174036}
 --- !u!114 &1815294795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3938,6 +3926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67de4d127a70a5a4f96e48c871e7ae37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bosswall: {fileID: 1184174041}
 --- !u!1 &1857683457
 GameObject:
   m_ObjectHideFlags: 0

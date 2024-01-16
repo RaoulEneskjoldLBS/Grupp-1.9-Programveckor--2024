@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - FIst
   - Healing
+  - Undefined
+  - Pickup
   layers:
   - Default
   - TransparentFX
