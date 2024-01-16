@@ -98,6 +98,15 @@ public class saves : MonoBehaviour
         if (verticalmove > -1 && Input.GetKeyUp(KeyCode.S))
         {
             animator.SetBool("S", false);
+        } 
+
+        if (Input.GetKey(KeyCode.Mouse1))
+        {
+            animator.SetBool("Dodge", true);
+
+        } else
+        {
+            animator.SetBool("Dodge", false);
         }
     }
 }
