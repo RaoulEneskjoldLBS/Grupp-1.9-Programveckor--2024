@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HP : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     public Image HealthBar;
     public float Health_ammount = 100;

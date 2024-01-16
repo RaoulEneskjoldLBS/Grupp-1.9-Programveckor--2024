@@ -43,7 +43,7 @@ public class saves : MonoBehaviour
         rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
 
 
-        float horizontalmove = Input.GetAxisRaw("horizontal") * moveSpeed;
+        float horizontalmove = Input.GetAxisRaw("Horizontal") * moveSpeed;
 
         animator.SetFloat("run", Mathf.Abs(horizontalmove));
 
