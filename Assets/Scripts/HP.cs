@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
     public Image HealthBar;
+    public Image HealthBar_Background;
     public float Health_ammount = 100;
     public GameObject Player;
     public Rigidbody2D rB;
@@ -24,6 +25,10 @@ public class PlayerHealth : MonoBehaviour
         {
             TakeDamage(20);
         }
+        else if(collision.gameObject.tag == "Healing")
+        {
+            Heal(20);
+        }
     }
 
     private void Update()
@@ -32,17 +37,8 @@ public class PlayerHealth : MonoBehaviour
         {
             Application.LoadLevel(Application.loadedLevel);
         }
-
-
-
+   
         
-          
-        
-        
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Healing(10);
-        }
     }
 
     
@@ -50,18 +46,20 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         
-        Health_ammount -= Damage;
+        Health_ammount -= Damage;      
         HealthBar.fillAmount = Health_ammount / 100;
 
     }
 
-    public void Healing(float healthpoints)
+    public void Heal(float health_points)
     {
-        Health_ammount += healthpoints;
+        Health_ammount += health_points;
         Health_ammount = Mathf.Clamp(Health_ammount, 0, 100);
 
         HealthBar.fillAmount = Health_ammount / 100;
     }
-        
+
+   
+
 
 }
