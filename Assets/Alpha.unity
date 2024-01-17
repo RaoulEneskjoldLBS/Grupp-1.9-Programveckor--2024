@@ -308,6 +308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -561,6 +562,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -749,6 +751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -937,6 +940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -1125,6 +1129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -1313,6 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -1326,10 +1332,10 @@ GameObject:
   m_Component:
   - component: {fileID: 410491380}
   - component: {fileID: 410491379}
-  - component: {fileID: 410491378}
   - component: {fileID: 410491377}
   - component: {fileID: 410491382}
   - component: {fileID: 410491381}
+  - component: {fileID: 410491383}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1349,25 +1355,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88068664c11d1e243b9b81cec8a0a513, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Stamina_Bar: {fileID: 0}
+  Stamina: 100
+  Max_Stamina: 100
+  Attack_Cost: 10
+  Run_Cost: 5
+  ChargeRate: 33
+  Dodge_Cost: 20
   moveSpeed: 5
   sprintSpeed: 10
---- !u!114 &410491378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 410491376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0ae48eab8ca5624fb309e97edb053c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 9141463243800127131, guid: 7828065ceeb0eb6478c20f1f0727c638, type: 3}
-  shootPoint: {fileID: 410491380}
-  shootForce: 10
-  timeBetweenShots: 0.6
-  projectileLifetime: 0.5
+  Sprinting: 0
+  dodgeSpeed: 10
+  dodgeDuration: 0.5
+  dodgeKey: 324
+  isDodging: 0
 --- !u!212 &410491379
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1507,6 +1508,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &410491383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 410491376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e2f6535378f2154c97eca107c7b9dcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 9141463243800127131, guid: 7828065ceeb0eb6478c20f1f0727c638, type: 3}
+  shootPoint: {fileID: 410491380}
+  shootForce: 10
+  timeBetweenShots: 0.5
+  projectileLifetime: 0.5
+  dmg: 10
 --- !u!1 &507988962
 GameObject:
   m_ObjectHideFlags: 0
@@ -1692,6 +1711,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -1742,6 +1762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67de4d127a70a5a4f96e48c871e7ae37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bosswall: {fileID: 0}
 --- !u!212 &531111054
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2051,6 +2072,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -2239,6 +2261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -2585,6 +2608,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -2808,6 +2832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -2858,6 +2883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67de4d127a70a5a4f96e48c871e7ae37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bosswall: {fileID: 0}
 --- !u!212 &1338999053
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3167,6 +3193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -3355,6 +3382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -3592,6 +3620,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -3642,6 +3671,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67de4d127a70a5a4f96e48c871e7ae37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bosswall: {fileID: 0}
 --- !u!212 &1815294791
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4058,6 +4088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -4246,6 +4277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -4434,6 +4466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
@@ -4622,6 +4655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 0}
   E_rb: {fileID: 0}
