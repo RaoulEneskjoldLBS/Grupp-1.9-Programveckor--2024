@@ -7,21 +7,28 @@ using System.Runtime.CompilerServices;
 
 public class playermovment : MonoBehaviour
 {
-
+    //Stamina
     public UnityEngine.UI.Image Stamina_Bar;
     public float Stamina = 100, Max_Stamina = 100;
     public float Attack_Cost = 10;
-    public float Run_Cost;
+    public float Run_Cost = 5;
+    public float ChargeRate = 33;
+    private Coroutine recharge;
+    private Rigidbody2D rb;
+    public float Dodge_Cost = 20;
 
+    //Movement
     public float moveSpeed = 5f;
     public float sprintSpeed = 10f;
     public bool Sprinting;
-
-    public float ChargeRate = 33;
-
-    private Coroutine recharge;
-    private Rigidbody2D rb;
     
+    //Dodge
+    public float dodgeSpeed = 10f;
+    public float dodgeDuration = 0.5f;
+    public KeyCode dodgeKey = KeyCode.Mouse1;
+    public bool isDodging = false;
+
+
 
     void Start()
     {
@@ -76,19 +83,63 @@ public class playermovment : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Stamina -= Attack_Cost;
-            if (Stamina < 0) Stamina = 0;
+            if (Stamina <= 0) Stamina = 0;
             Stamina_Bar.fillAmount = Stamina / Max_Stamina;
 
             if (recharge != null) StopCoroutine(recharge);
             recharge = StartCoroutine(ChargeStamina());
         }
 
+        //Dodgeing
+        if (Input.GetKeyDown(dodgeKey) && !isDodging)
+        {
+            float horizontalInput = Input.GetAxis("Horizontal");
+            float verticalInput = Input.GetAxis("Vertical");
+            Vector2 dodgeDirection = new Vector2(horizontalInput, verticalInput).normalized;
+
+            StartCoroutine(PerformDodge(dodgeDirection));
+
+            Stamina -= Dodge_Cost;
+            if (Stamina <= 0) Stamina = 0;
+            Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+
+            if(Stamina <= 0)
+            {
+                StopCoroutine(PerformDodge(dodgeDirection));
+            }
+
+            if (recharge != null) StopCoroutine(recharge);
+            recharge = StartCoroutine(ChargeStamina());
 
 
-        
+
+        }
+
+
+
 
     }
-    
+
+    IEnumerator PerformDodge(Vector2 dodgeDirection)
+    {
+
+        isDodging = true;
+
+        Vector2 dodgeEndpoint = (Vector2)transform.position + dodgeDirection * dodgeSpeed * dodgeDuration;
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = Vector2.zero;
+
+        float startTime = Time.time;
+        while (Time.time - startTime < dodgeDuration)
+        {
+            rb.MovePosition(Vector2.Lerp(transform.position, dodgeEndpoint, (Time.time - startTime) / dodgeDuration));
+            yield return null;
+        }
+
+        isDodging = false;
+    }
+
     //Stamina Recharge
     private IEnumerator ChargeStamina()
     {
@@ -99,8 +150,11 @@ public class playermovment : MonoBehaviour
             if (Stamina > Max_Stamina) Stamina = Max_Stamina;
             Stamina_Bar.fillAmount = Stamina / Max_Stamina;
             yield return new WaitForSeconds(.1f);
+
+            
         }
     }
+    
     
 
     
