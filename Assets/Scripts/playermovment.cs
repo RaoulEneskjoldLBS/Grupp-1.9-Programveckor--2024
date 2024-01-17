@@ -80,7 +80,7 @@ public class playermovment : MonoBehaviour
         
 
         //Stamina when attacking
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && Stamina > 0)
         {
             Stamina -= Attack_Cost;
             if (Stamina <= 0) Stamina = 0;
@@ -91,33 +91,22 @@ public class playermovment : MonoBehaviour
         }
 
         //Dodgeing
-        if (Input.GetKeyDown(dodgeKey) && !isDodging)
-        {
-            float horizontalInput = Input.GetAxis("Horizontal");
-            float verticalInput = Input.GetAxis("Vertical");
-            Vector2 dodgeDirection = new Vector2(horizontalInput, verticalInput).normalized;
-
-            StartCoroutine(PerformDodge(dodgeDirection));
-
-            Stamina -= Dodge_Cost;
-            if (Stamina <= 0) Stamina = 0;
-            Stamina_Bar.fillAmount = Stamina / Max_Stamina;
-
-            if(Stamina <= 0)
+            if (Input.GetKeyDown(dodgeKey) && !isDodging && Stamina > 0)
             {
-                StopCoroutine(PerformDodge(dodgeDirection));
+                float horizontalInput = Input.GetAxis("Horizontal");
+                float verticalInput = Input.GetAxis("Vertical");
+                Vector2 dodgeDirection = new Vector2(horizontalInput, verticalInput).normalized;
+
+                StartCoroutine(PerformDodge(dodgeDirection));
+
+                Stamina -= Dodge_Cost;
+                if (Stamina <= 0) Stamina = 0;
+                Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+
+                if (recharge != null) StopCoroutine(recharge);
+               recharge = StartCoroutine(ChargeStamina());
             }
-
-            if (recharge != null) StopCoroutine(recharge);
-            recharge = StartCoroutine(ChargeStamina());
-
-
-
-        }
-
-
-
-
+        
     }
 
     IEnumerator PerformDodge(Vector2 dodgeDirection)

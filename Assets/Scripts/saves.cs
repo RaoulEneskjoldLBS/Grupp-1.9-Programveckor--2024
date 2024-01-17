@@ -12,6 +12,8 @@ public class saves : MonoBehaviour
     Animator animator;
 
     SpriteRenderer sr;
+
+    playermovment Player;
     
 
 
@@ -21,6 +23,8 @@ public class saves : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         sr = GetComponent<SpriteRenderer>();
+        Player = GetComponent<playermovment>();
+
     }
 
     // Update is called once per frame
@@ -99,7 +103,7 @@ public class saves : MonoBehaviour
             animator.SetBool("S", false);
         } 
 
-        if (Input.GetKeyDown(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1) && Player.Stamina > 0)
         {
             animator.SetBool("Dodge", true);
 
