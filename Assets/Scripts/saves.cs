@@ -57,10 +57,10 @@ public class saves : MonoBehaviour
             animator.SetBool("D", false);
         }
 
-        if (horizontalmove < 0)
+        if (horizontalmove < -1)
         {
             sr.flipX = true;
-        } else
+        } else if (horizontalmove > 1)
         {
             sr.flipX = false;
         }
