@@ -7,7 +7,6 @@ public class saves : MonoBehaviour
 
     public float moveSpeed = 5f;
     public float sprintSpeed = 10f;
-    public float punchForce = 10f;
     private Rigidbody2D rb;
 
     Animator animator;
@@ -100,7 +99,7 @@ public class saves : MonoBehaviour
             animator.SetBool("S", false);
         } 
 
-        if (Input.GetKey(KeyCode.Mouse1))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
             animator.SetBool("Dodge", true);
 
