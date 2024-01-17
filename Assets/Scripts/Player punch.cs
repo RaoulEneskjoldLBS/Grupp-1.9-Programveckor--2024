@@ -8,10 +8,16 @@ public class Playerpunch : MonoBehaviour
     public Transform shootPoint;
     public float shootForce = 10f;
     public float timeBetweenShots = 0.5f;
-    public float projectileLifetime = 3f; 
+    public float projectileLifetime = 3f;
+    playermovment Player;
 
     private float timer = 0f;
-    private Vector2 lastInputDirection = Vector2.right; 
+    private Vector2 lastInputDirection = Vector2.right;
+
+    private void Start()
+    {
+        Player = GetComponent<playermovment>();
+    }
 
     void Update()
     {
@@ -25,7 +31,7 @@ public class Playerpunch : MonoBehaviour
             lastInputDirection = new Vector2(horizontal, vertical).normalized;
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && timer >= timeBetweenShots)
+        if (Input.GetKeyDown(KeyCode.Space) && timer >= timeBetweenShots && Player.Stamina > 0)
         {
             Shoot();
             timer = 0f; 
