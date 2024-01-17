@@ -33,67 +33,56 @@ public class OHSHITARAT : MonoBehaviour
 
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-        bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+       
 
+       
 
-        Vector2 movement = new Vector2(horizontal, vertical);
-        movement.Normalize();
-
-
-        float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
-
-
-        rb.velocity = new Vector2(movement.x * currentSpeed, movement.y * currentSpeed);
-        float horizontalmove = Input.GetAxisRaw("Horizontal") * currentSpeed;
-        float verticalmove = Input.GetAxisRaw("Vertical") * currentSpeed;
-
-        if (horizontalmove < -0.1)
-        {
-            sr.flipX = true;
-        }
-        else if (horizontalmove > 0.1)
-        {
-            sr.flipX = false;
-        }
-
-        if (horizontalmove >= 0.1 )
+        if (horizontal >= 0.1 )
         {
             animator.SetBool("RAT RIGHT", true);
         }
 
-        if (horizontalmove < 0.1 )
+        if (horizontal < 0.1 )
         {
             animator.SetBool("RAT RIGHT", false);
         }
 
-        if (horizontalmove <= -0.1 )
+        if (horizontal <= -0.1 )
         {
             animator.SetBool("RAT LEFT", true);
         }
 
-        if (horizontalmove > -0.1 )
+        if (horizontal > -0.1 )
         {
             animator.SetBool("RAT LEFT", false);
         }
 
-        if (verticalmove >= 0.1 )
+        if (vertical >= 0.1 )
         {
             animator.SetBool("RAT UP", true);
         }
 
-        if (verticalmove < 0.1 )
+        if (vertical < 0.1 )
         {
             animator.SetBool("RAT UP", false);
         }
 
-        if (verticalmove <= -0.1)
+        if (vertical <= -0.1)
         {
             animator.SetBool("RAT DOWN", true);
         }
 
-        if (verticalmove > -0.1)
+        if (vertical > -0.1)
         {
             animator.SetBool("RAT DOWN", false);
+        }
+        if (horizontal < -0.1)
+        {
+            sr.flipX = true;
+        }
+        else if (horizontal > 0.1)
+        {
+            sr.flipX = false;
         }
     }
 }
