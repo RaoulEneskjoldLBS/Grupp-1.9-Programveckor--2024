@@ -10,13 +10,14 @@ public class HP : MonoBehaviour
     public float Health_ammount = 100;
     public GameObject Player;
     public Rigidbody2D rB;
-
+    
     
 
     private void Start()
     {
         Health_ammount = 100;
         rB = GetComponent<Rigidbody2D>();
+        
     }
 
     //Checks what object player collides with
