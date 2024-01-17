@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class DashController : MonoBehaviour
@@ -8,7 +9,12 @@ public class DashController : MonoBehaviour
     public float dodgeDuration = 0.5f;
     public KeyCode dodgeKey = KeyCode.Mouse1;
 
-    private bool isDodging = false;
+    public bool isDodging = false;
+    
+    
+    
+   
+    
 
     void Update()
     {

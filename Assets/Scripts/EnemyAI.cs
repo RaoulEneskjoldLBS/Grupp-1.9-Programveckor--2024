@@ -6,13 +6,15 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+
+   
+    
     public float speed = 3.5f;
-    
-    
     public float initialDetectionRange = 10f;
     private float currentDetectionRange;
     private Transform player;
     private Rigidbody2D rb;
+
 
     void Start()
     {
