@@ -578,10 +578,15 @@ MonoBehaviour:
   Max_Stamina: 100
   Attack_Cost: 10
   Run_Cost: 20
+  ChargeRate: 10
+  Dodge_Cost: 20
   moveSpeed: 5
   sprintSpeed: 10
   Sprinting: 0
-  ChargeRate: 10
+  dodgeSpeed: 10
+  dodgeDuration: 0.5
+  dodgeKey: 324
+  isDodging: 0
 --- !u!95 &243919736
 Animator:
   serializedVersion: 5

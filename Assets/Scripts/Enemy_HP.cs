@@ -8,7 +8,7 @@ public class Enemy_HP : MonoBehaviour
     public GameObject Enemy;
     public Rigidbody2D E_rb;
 
-
+   
 
 
     void Start()
@@ -34,7 +34,6 @@ public class Enemy_HP : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
     }
 
     public void Enemy_Take_Damage(float Damage)
