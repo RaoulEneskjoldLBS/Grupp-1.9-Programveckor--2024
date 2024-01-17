@@ -4,17 +4,23 @@ using UnityEngine;
 
 public class Enemy_HP : MonoBehaviour
 {
+    public Playerpunch PP;
+
+
     public float Enemy_Health_Ammount = 100;
     public GameObject Enemy;
     public Rigidbody2D E_rb;
+    
 
 
+   
 
 
     void Start()
     {
         Enemy_Health_Ammount = 100;
         E_rb = GetComponent<Rigidbody2D>();
+        PP = FindObjectOfType<Playerpunch>();
     }
 
     //Enemy takes damage
@@ -23,7 +29,7 @@ public class Enemy_HP : MonoBehaviour
 
         if(collision.gameObject.tag == "FIst") //Change "Player" to "Projectile" when projectile object exists
         {
-            Enemy_Take_Damage(50);
+            Enemy_Take_Damage(PP.dmg);
         }
     }
 
@@ -34,7 +40,6 @@ public class Enemy_HP : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
     }
 
     public void Enemy_Take_Damage(float Damage)

@@ -10,6 +10,7 @@ public class Playerpunch : MonoBehaviour
     public float timeBetweenShots = 0.5f;
     public float projectileLifetime = 3f;
     playermovment Player;
+    public float dmg = 10f; 
 
     private float timer = 0f;
     private Vector2 lastInputDirection = Vector2.right;
