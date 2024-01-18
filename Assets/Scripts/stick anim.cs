@@ -5,12 +5,12 @@ using UnityEngine;
 public class stickanim : MonoBehaviour
 {
 
-    GameObject stickattack;
+    GameObject stickattackleft;
     
     // Start is called before the first frame update
     void Start()
     {
-        stickattack = GetComponent<GameObject>();
+        stickattackleft = GetComponent<GameObject>();
     }
 
     // Update is called once per frame
@@ -18,11 +18,11 @@ public class stickanim : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyUp(KeyCode.Space ))
         {
-            stickattack.SetActive(true);
+            stickattackleft.SetActive(true);
 
         } else
         {
-            stickattack.SetActive(false);
+            stickattackleft.SetActive(false);
         }
     }
 }
