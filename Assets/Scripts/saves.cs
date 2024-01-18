@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -14,8 +15,8 @@ public class saves : MonoBehaviour
     SpriteRenderer sr;
 
     playermovment Player;
-    
 
+    public bool flipyes;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,8 @@ public class saves : MonoBehaviour
 
         bool isSprinting = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
 
+    
+
 
         Vector2 movement = new Vector2(horizontal, vertical);
         movement.Normalize();
@@ -50,6 +53,8 @@ public class saves : MonoBehaviour
 
         animator.SetFloat("run", Mathf.Abs(horizontalmove));
 
+           
+
 
         if (horizontalmove >= 1 && Input.GetKeyDown(KeyCode.D))
         { 
@@ -64,9 +69,11 @@ public class saves : MonoBehaviour
         if (horizontalmove < -1)
         {
             sr.flipX = true;
+            flipyes = true;
         } else if (horizontalmove > 1)
         {
             sr.flipX = false;
+            flipyes = false;
         }
         if (horizontalmove <= -1 && Input.GetKeyDown(KeyCode.A))
         {
