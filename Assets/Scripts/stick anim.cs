@@ -10,13 +10,13 @@ public class stickanim : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        stickattack = GetComponent<GameObject>();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A) )
+        if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyUp(KeyCode.Space ))
         {
             stickattack.SetActive(true);
 
