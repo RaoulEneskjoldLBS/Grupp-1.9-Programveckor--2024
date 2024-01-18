@@ -7,22 +7,22 @@ public class OHSHITARAT : MonoBehaviour
 
  
 {
-    public float moveSpeed = 5f;
-    public float sprintSpeed = 10f;
+    public float moveSpeed = 4f;
+    
 
-    Animator animator;
+    Animator animatorr;
 
-    SpriteRenderer sr;
+    SpriteRenderer srr;
 
-    playermovment Player;
+    
 
-    Rigidbody2D rb;
+    private Rigidbody2D rbb;
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();
-        sr = GetComponent<SpriteRenderer>();
-        rb = GetComponent<Rigidbody2D>();
+        animatorr = GetComponent<Animator>();
+        srr = GetComponent<SpriteRenderer>();
+        rbb = GetComponent<Rigidbody2D>();
     }
 
    
@@ -31,58 +31,60 @@ public class OHSHITARAT : MonoBehaviour
     void Update()
     {
 
-        float horizontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
+        float ratspeed = moveSpeed;
+
+        float horizontalnew = Input.GetAxisRaw("Horizontal")* ratspeed;
+        float verticalnew = Input.GetAxisRaw("Vertical") * ratspeed;
+       
+       
        
 
-       
-
-        if (horizontal >= 0.1 )
+        if (horizontalnew >= 0.1 )
         {
-            animator.SetBool("RAT RIGHT", true);
+            animatorr.SetBool("RAT RIGHT", true);
         }
 
-        if (horizontal < 0.1 )
+        if (horizontalnew < 0.1 )
         {
-            animator.SetBool("RAT RIGHT", false);
+            animatorr.SetBool("RAT RIGHT", false);
         }
 
-        if (horizontal <= -0.1 )
+        if (horizontalnew <= -0.1 )
         {
-            animator.SetBool("RAT LEFT", true);
+            animatorr.SetBool("RAT LEFT", true);
         }
 
-        if (horizontal > -0.1 )
+        if (horizontalnew > -0.1 )
         {
-            animator.SetBool("RAT LEFT", false);
+            animatorr.SetBool("RAT LEFT", false);
         }
 
-        if (vertical >= 0.1 )
+        if (verticalnew >= 0.1 )
         {
-            animator.SetBool("RAT UP", true);
+            animatorr.SetBool("RAT UP", true);
         }
 
-        if (vertical < 0.1 )
+        if (verticalnew < 0.1 )
         {
-            animator.SetBool("RAT UP", false);
+            animatorr.SetBool("RAT UP", false);
         }
 
-        if (vertical <= -0.1)
+        if (verticalnew <= -0.1)
         {
-            animator.SetBool("RAT DOWN", true);
+            animatorr.SetBool("RAT DOWN", true);
         }
 
-        if (vertical > -0.1)
+        if (verticalnew > -0.1)
         {
-            animator.SetBool("RAT DOWN", false);
+            animatorr.SetBool("RAT DOWN", false);
         }
-        if (horizontal < -0.1)
+        if (horizontalnew < -0.1)
         {
-            sr.flipX = true;
+            srr.flipX = true;
         }
-        else if (horizontal > 0.1)
+        else if (horizontalnew > 0.1)
         {
-            sr.flipX = false;
+            srr.flipX = false;
         }
     }
 }
