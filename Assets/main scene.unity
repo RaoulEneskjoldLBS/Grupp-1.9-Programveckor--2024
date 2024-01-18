@@ -1180,6 +1180,18 @@ MonoBehaviour:
   Health_ammount: 100
   Player: {fileID: 243919733}
   rB: {fileID: 243919737}
+--- !u!114 &243919742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243919733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ae48eab8ca5624fb309e97edb053c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &243919743
 MonoBehaviour:
   m_ObjectHideFlags: 0
