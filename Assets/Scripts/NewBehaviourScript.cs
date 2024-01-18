@@ -14,7 +14,7 @@ public class BossAI : MonoBehaviour
     public bool isSlamAttackReady = true;       // Start with the slam attack ready
     public bool isKnockbackReady = true;        // Start with the knockback ready
     public bool isKnockbackInProgress = false;
-
+    Animator Ratimator;
 
     private void Update()
     {
@@ -35,7 +35,12 @@ public class BossAI : MonoBehaviour
                 // Perform slam attack when slam attack is ready
                 if (isSlamAttackReady)
                 {
+                    Ratimator.SetBool("kingslam", true);
                     PerformSlamAttack(player);
+                } else
+                {
+                    Ratimator.SetBool("kingslam", false);
+
                 }
 
                 // Perform knockback when knockback is ready
