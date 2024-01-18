@@ -9,29 +9,35 @@ public class stickanim : MonoBehaviour
 
 
 
-    public string sticklefttag = "stick left";
-    GameObject stickattackleft = GameObject.FindGameObjectsWithTag(sticklefttag);
-    GameObject stickattackup = GameObject.Find("stickattackup");
-    GameObject stickattackdown = GameObject.Find("stickattackdown");
-    GameObject stickattackright = GameObject.Find("stickattackright");
+    public string stickattackleftTag = "stickattackleft";
+    GameObject stickattackleft;
+    GameObject stickattackup;
+    GameObject stickattackdown;
+    GameObject stickattackright;
+   
 
  
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
-        stickattackleft = GetComponent<GameObject>();
-        stickattackup = GetComponent<GameObject>();
-        stickattackdown = GetComponent<GameObject>();
-        stickattackright = GetComponent<GameObject>();
+        GameObject stickattackleft = GameObject.FindGameObjectWithTag(stickattackleftTag);
+        GameObject stickattackup = GameObject.Find("stickattackup");
+        GameObject stickattackdown = GameObject.Find("stickattackdown");
+        GameObject stickattackright = GameObject.Find("stickattackright");
     }
 
     // Update is called once per frame
     public void Update()
+
     {
-        if (Input.GetKeyDown(KeyCode.A) && Input.GetKeyUp(KeyCode.Space ))
+
+        
+
+        if (Input.GetKeyDown(KeyCode.A) && Input.GetKey(KeyCode.Space ))
         {
             stickattackleft.SetActive(true);
+            Debug.Log("left swing");
 
         } else
         {
