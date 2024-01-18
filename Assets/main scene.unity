@@ -3352,6 +3352,7 @@ GameObject:
   - component: {fileID: 918619624}
   - component: {fileID: 918619623}
   - component: {fileID: 918619622}
+  - component: {fileID: 918619625}
   m_Layer: 0
   m_Name: RatKing
   m_TagString: Untagged
@@ -3447,6 +3448,29 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &918619625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918619621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5907b6095783288439375bfd6b00556f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 10
+  attackRange: 2
+  playerTag: Player
+  slamDamage: 10
+  knockbackForce: 5
+  knockbackDistance: 2
+  slamCooldown: 20
+  knockbackCooldown: 5
+  isSlamAttackReady: 1
+  isKnockbackReady: 1
+  isKnockbackInProgress: 0
 --- !u!1 &920106712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7191951380686447036, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
