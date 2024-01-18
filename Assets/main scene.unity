@@ -219,7 +219,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.45233, y: 1.5100406, z: 0}
-  m_LocalScale: {x: -160.12486, y: 122.9, z: 1}
+  m_LocalScale: {x: -2908.9695, y: 1374.0426, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -410,6 +410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 108411215}
   E_rb: {fileID: 108411217}
@@ -664,6 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 144898430}
   E_rb: {fileID: 144898432}
@@ -974,7 +976,7 @@ Transform:
   m_GameObject: {fileID: 243919733}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.39, y: 0.17, z: 0}
+  m_LocalPosition: {x: -2.6, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1113,6 +1115,8 @@ MonoBehaviour:
   shootForce: 10
   timeBetweenShots: 0.5
   projectileLifetime: 0.1
+  timer: 0
+  lastInputDirection: {x: 1, y: 0}
 --- !u!114 &243919743
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1506,6 +1510,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 306515502}
   E_rb: {fileID: 306515504}
@@ -1739,6 +1744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 309367262}
   E_rb: {fileID: 309367264}
@@ -2241,6 +2247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 637237377}
   E_rb: {fileID: 637237379}
@@ -2537,6 +2544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 683715793}
   E_rb: {fileID: 683715795}
@@ -3224,6 +3232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 982323021}
   E_rb: {fileID: 982323023}
@@ -3499,6 +3508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1070497409}
   E_rb: {fileID: 1070497411}
@@ -3732,6 +3742,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1080984647}
   E_rb: {fileID: 1080984649}
@@ -4401,6 +4412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1443238186}
   E_rb: {fileID: 1443238188}
@@ -4890,6 +4902,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1504159745}
   E_rb: {fileID: 1504159747}
@@ -5905,6 +5918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1810225136}
   E_rb: {fileID: 1810225138}
@@ -6046,6 +6060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1827420476}
   E_rb: {fileID: 1827420478}
@@ -6356,6 +6371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 1843354660}
   E_rb: {fileID: 1843354662}
@@ -6413,6 +6429,110 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2556532322459562970, guid: 1441380c22c93a34eb7dd7e55c147b5f, type: 3}
   m_PrefabInstance: {fileID: 1305605630}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1859654431
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1859654434}
+  - component: {fileID: 1859654433}
+  - component: {fileID: 1859654432}
+  m_Layer: 0
+  m_Name: Square (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1859654432
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859654431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5907b6095783288439375bfd6b00556f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectionRange: 10
+  slamRadius: 10
+  slamForce: 10
+  slamDamage: 20
+  affectedLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!212 &1859654433
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859654431}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &1859654434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859654431}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 35.06, y: -0.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1871913038
 GameObject:
   m_ObjectHideFlags: 0
@@ -6441,7 +6561,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.6939457, w: 0.7200273}
   m_LocalPosition: {x: 2.4356644, y: 1.9250324, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.54846, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -7545,7 +7665,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.59, y: 1.08}
+  m_AnchoredPosition: {x: 0.1, y: 0.79}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.46113193, y: 0.49750838}
 --- !u!81 &2000023930
@@ -7934,6 +8054,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 2035288508}
   E_rb: {fileID: 2035288510}
@@ -8167,6 +8288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 2053440417}
   E_rb: {fileID: 2053440419}
@@ -8575,6 +8697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PP: {fileID: 0}
   Enemy_Health_Ammount: 100
   Enemy: {fileID: 2131946978}
   E_rb: {fileID: 2131946980}
@@ -8844,3 +8967,4 @@ SceneRoots:
   - {fileID: 1871913039}
   - {fileID: 24240187}
   - {fileID: 848271846}
+  - {fileID: 1859654434}
