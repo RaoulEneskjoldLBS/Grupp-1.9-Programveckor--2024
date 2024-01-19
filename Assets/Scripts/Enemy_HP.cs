@@ -18,7 +18,7 @@ public class Enemy_HP : MonoBehaviour
 
     void Start()
     {
-        Enemy_Health_Ammount = 20;
+        Enemy_Health_Ammount = 100;
         E_rb = GetComponent<Rigidbody2D>();
         PP = FindObjectOfType<Playerpunch>();
     }

@@ -117,6 +117,17 @@ public class saves : MonoBehaviour
         } else
         {
             animator.SetBool("Dodge", false);
+
+
+        }
+
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetBool("E", true);
+        } else
+        {
+            animator.SetBool("E", false);
         }
     }
 }
