@@ -16,9 +16,15 @@ public class BossAI : MonoBehaviour
     public bool isKnockbackInProgress = false;
     Animator Ratimator;
 
+    private void Start()
+    {
+        Ratimator = GetComponent<Animator>();
+    }
+
     private void Update()
     {
         CheckPlayerInRange();
+
     }
 
     private void CheckPlayerInRange()
