@@ -3454,6 +3454,7 @@ GameObject:
   - component: {fileID: 918619626}
   - component: {fileID: 918619629}
   - component: {fileID: 918619630}
+  - component: {fileID: 918619631}
   m_Layer: 0
   m_Name: RatKing
   m_TagString: Untagged
@@ -3562,10 +3563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 644762b97f0661f47a19495deeea5b5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slamRadius: 5
-  slamDamage: 10
-  slamKnockbackForce: 500
-  slamCooldown: 3
   projectilePrefab: {fileID: 8147495233971212963, guid: 58c600c694ddbbb4d8afa23db6fd4b24, type: 3}
   projectileSpeed: 8
   projectileDamage: 5
@@ -3583,7 +3580,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spritePrefab: {fileID: 1843354660}
-  spawnInterval: 1
+  spawnInterval: 5
+  detectionRange: 10
 --- !u!50 &918619629
 Rigidbody2D:
   serializedVersion: 4
@@ -3656,6 +3654,22 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.0001, y: 0.0001}
   m_EdgeRadius: 0
+--- !u!114 &918619631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918619621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cb5ea0aff5b05143bcf94c43726ef99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PP: {fileID: 0}
+  Enemy_Health_Ammount: 200
+  Enemy: {fileID: 918619621}
+  E_rb: {fileID: 0}
 --- !u!1 &920106712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7191951380686447036, guid: 95828a579584aae4fada7afc96b1319a, type: 3}
