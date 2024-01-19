@@ -132,7 +132,7 @@ public class playermovment : MonoBehaviour
     //Stamina Recharge
     private IEnumerator ChargeStamina()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         while(Stamina < Max_Stamina)
         {
             Stamina += ChargeRate / 10f;
