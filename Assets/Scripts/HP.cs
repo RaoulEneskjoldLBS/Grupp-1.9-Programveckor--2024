@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "Enemy")
         {
-            TakeDamage(20);
+            TakeDamage(5);
         }
         else if(collision.gameObject.tag == "Healing")
         {
