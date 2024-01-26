@@ -2,11 +2,7 @@ using UnityEngine;
 
 public class RatKing : MonoBehaviour
 {
-    public float slamRadius = 5f;
-    public float slamDamage = 10f;
-    public float slamKnockbackForce = 500f;
-    public float slamCooldown = 3f;
-
+    
     public GameObject projectilePrefab;
     public float projectileSpeed = 8f;
     public float projectileDamage = 5f;
@@ -15,7 +11,6 @@ public class RatKing : MonoBehaviour
     private Transform player;
     private bool canSlam = true;
     private bool canShoot = true;
-    private float lastShootTime;
 
     private void Start()
     {
@@ -24,30 +19,17 @@ public class RatKing : MonoBehaviour
 
     private void Update()
     {
-        // Perform area of effect slam attack with cooldown
-        if (canSlam && Vector2.Distance(transform.position, player.position) <= slamRadius)
-        {
-            PerformSlamAttack();
-            StartCoroutine(ResetSlamCooldown());
-        }
+       
 
-        // Shoot projectiles with a cooldown
-        if (canShoot && Time.time - lastShootTime >= projectileCooldown)
+        // Shoot projectiles with cooldown
+        if (canShoot)
         {
             ShootProjectile();
-            lastShootTime = Time.time; // Update the last shoot time
+            StartCoroutine(ResetProjectileCooldown());
         }
     }
 
-    private void PerformSlamAttack()
-    {
-        // Add knockback force to the player
-        Vector2 knockbackDirection = (player.position - transform.position).normalized;
-        player.GetComponent<Rigidbody2D>().AddForce(knockbackDirection * slamKnockbackForce);
-
-        // Deal damage to the player
-        player.GetComponent<PlayerHealth>().TakeDamage(slamDamage);
-    }
+    
 
     private void ShootProjectile()
     {
@@ -56,13 +38,17 @@ public class RatKing : MonoBehaviour
         Vector2 shootDirection = (player.position - transform.position).normalized;
         projectile.GetComponent<Rigidbody2D>().velocity = shootDirection * projectileSpeed;
         projectile.GetComponent<Projectile>().SetDamage(projectileDamage);
+
+        canShoot = false; // Disable shooting until the cooldown is over
     }
 
-    private System.Collections.IEnumerator ResetSlamCooldown()
+
+
+    private System.Collections.IEnumerator ResetProjectileCooldown()
     {
-        canSlam = false;
-        yield return new WaitForSeconds(slamCooldown);
-        canSlam = true;
+        yield return new WaitForSeconds(projectileCooldown);
+
+        // Reset shooting after the cooldown is over
+        canShoot = true;
     }
 }
-
