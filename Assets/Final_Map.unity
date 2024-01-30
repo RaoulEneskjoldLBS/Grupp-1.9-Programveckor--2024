@@ -2621,6 +2621,8 @@ GameObject:
   - component: {fileID: 134805484}
   - component: {fileID: 134805486}
   - component: {fileID: 134805485}
+  - component: {fileID: 134805488}
+  - component: {fileID: 134805487}
   m_Layer: 0
   m_Name: Hugos trash bag (13)
   m_TagString: Untagged
@@ -3739,7 +3741,7 @@ PrefabInstance:
       objectReference: {fileID: 689202240}
     - target: {fileID: 5249747671799415582, guid: e55391aecd58b5749b1dfc0dde984638, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 277.7159
+      value: 277.59
       objectReference: {fileID: 0}
     - target: {fileID: 5249747671799415582, guid: e55391aecd58b5749b1dfc0dde984638, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9460,9 +9462,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3386666279769958480, guid: 0319f1570d6671d4b859ae39b7a9bbdd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 762715724}
-    - targetCorrespondingSourceObject: {fileID: 8091801280126427287, guid: 0319f1570d6671d4b859ae39b7a9bbdd, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1555111648}
     - targetCorrespondingSourceObject: {fileID: 1360122582767109268, guid: 0319f1570d6671d4b859ae39b7a9bbdd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1476298502}
@@ -24717,7 +24716,6 @@ GameObject:
   - component: {fileID: 1549819306}
   - component: {fileID: 1549819308}
   - component: {fileID: 1549819307}
-  - component: {fileID: 1549819309}
   m_Layer: 0
   m_Name: harlem wall x (10)
   m_TagString: Untagged
@@ -24837,27 +24835,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1558090630
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8091801280126427287, guid: 0319f1570d6671d4b859ae39b7a9bbdd, type: 3}
-  m_PrefabInstance: {fileID: 543460442}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1555111648
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555111644}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9809bf1345abc5648af68b3a82653f08, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_OverrideArea: 1
-  m_Area: 1
-  m_IgnoreFromBuild: 0
-  m_AffectedAgents: ffffffff
 --- !u!1001 &1561051973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33905,3 +33882,30 @@ SceneRoots:
   - {fileID: 1961009955}
   - {fileID: 1459361630}
   - {fileID: 62913393}
+  - {fileID: 380242242}
+  - {fileID: 964726238}
+  - {fileID: 160328720}
+  - {fileID: 338380366}
+  - {fileID: 509750974}
+  - {fileID: 1561051973}
+  - {fileID: 851076080}
+  - {fileID: 207809093}
+  - {fileID: 922845648}
+  - {fileID: 44262801}
+  - {fileID: 473768385}
+  - {fileID: 278293871}
+  - {fileID: 901601617}
+  - {fileID: 1658251184}
+  - {fileID: 699510973}
+  - {fileID: 1025427029}
+  - {fileID: 1489292541}
+  - {fileID: 1125418816}
+  - {fileID: 975538037}
+  - {fileID: 1148717091}
+  - {fileID: 1159058654}
+  - {fileID: 229679066}
+  - {fileID: 454633509}
+  - {fileID: 464533182}
+  - {fileID: 794323779}
+  - {fileID: 1452502472}
+  - {fileID: 2047957207}
