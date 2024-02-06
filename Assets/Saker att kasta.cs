@@ -10,7 +10,7 @@ public class Sakerattkasta : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            Ammo.AmmoAmount += 1;
+            Ammo.ammoAmount += 1;
 
             Destroy(gameObject);
         }
