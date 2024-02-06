@@ -19521,7 +19521,7 @@ EdgeCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -37336,11 +37336,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Stamina_Bar: {fileID: 403466917}
   Stamina: 100
-  Max_Stamina: 100
-  Attack_Cost: 10
-  Run_Cost: 5
-  ChargeRate: 33
-  Dodge_Cost: 20
+  maxStamina: 100
+  attackCost: 10
+  runCost: 5
+  chargeRate: 33
+  dodgeCost: 20
   moveSpeed: 5
   sprintSpeed: 10
   Sprinting: 0
@@ -37474,8 +37474,8 @@ MonoBehaviour:
   timeBetweenShots: 0.5
   projectileLifetime: 3
   dmg: 10
-  AmmoNeeded: 1
-  AmmoAmount: 5
+  ammoNeeded: 0
+  ammoAmount: 0
 --- !u!114 &1884456096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37518,9 +37518,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f716af1c718ed84493b4475b655a538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HealthBar: {fileID: 588303008}
-  HealthBar_Background: {fileID: 0}
-  Health_ammount: 250
+  healthBar: {fileID: 0}
+  healthBarBackground: {fileID: 0}
+  healthAmmount: 100
   Player: {fileID: 1884456087}
   rB: {fileID: 0}
 --- !u!114 &1884456099
