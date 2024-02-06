@@ -7,9 +7,9 @@ public class Enemy_HP : MonoBehaviour
     public Playerpunch PP;
 
 
-    public float Enemy_Health_Ammount = 100;
+    public float enemyHealthAmmount = 100;
     public GameObject Enemy;
-    public Rigidbody2D E_rb;
+    public Rigidbody2D enemyRB;
     
 
 
@@ -18,8 +18,8 @@ public class Enemy_HP : MonoBehaviour
 
     void Start()
     {
-        Enemy_Health_Ammount = 20;
-        E_rb = GetComponent<Rigidbody2D>();
+        enemyHealthAmmount = 20;
+        enemyRB = GetComponent<Rigidbody2D>();
         PP = FindObjectOfType<Playerpunch>();
     }
 
@@ -36,7 +36,7 @@ public class Enemy_HP : MonoBehaviour
     void Update()
     {
         //Enemy death
-        if(Enemy_Health_Ammount <= 0)
+        if(enemyHealthAmmount <= 0)
         {
             Destroy(gameObject);
         }
@@ -44,6 +44,6 @@ public class Enemy_HP : MonoBehaviour
 
     public void Enemy_Take_Damage(float Damage)
     {
-        Enemy_Health_Ammount -= Damage;
+        enemyHealthAmmount -= Damage;
     }
 }

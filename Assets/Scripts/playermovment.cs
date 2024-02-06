@@ -9,13 +9,13 @@ public class playermovment : MonoBehaviour
 {
     //Stamina
     public UnityEngine.UI.Image Stamina_Bar;
-    public float Stamina = 100, Max_Stamina = 100;
-    public float Attack_Cost = 10;
-    public float Run_Cost = 5;
-    public float ChargeRate = 33;
+    public float Stamina = 100, maxStamina = 100;
+    public float attackCost = 10;
+    public float runCost = 5;
+    public float chargeRate = 33;
     private Coroutine recharge;
     private Rigidbody2D rb;
-    public float Dodge_Cost = 20;
+    public float dodgeCost = 20;
 
     //Movement
     public float moveSpeed = 5f;
@@ -59,9 +59,9 @@ public class playermovment : MonoBehaviour
         {
 
         
-            Stamina -= Run_Cost * Time.deltaTime;
+            Stamina -= runCost * Time.deltaTime;
             if (Stamina < 0) Stamina = 0;
-            Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+            Stamina_Bar.fillAmount = Stamina / maxStamina;
             if (Stamina < 0)
             {
                 Sprinting = false;
@@ -82,9 +82,9 @@ public class playermovment : MonoBehaviour
         //Stamina when attacking
         if (Input.GetKeyDown(KeyCode.Space) && Stamina > 0)
         {
-            Stamina -= Attack_Cost;
+            Stamina -= attackCost;
             if (Stamina <= 0) Stamina = 0;
-            Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+            Stamina_Bar.fillAmount = Stamina / maxStamina;
 
             if (recharge != null) StopCoroutine(recharge);
             recharge = StartCoroutine(ChargeStamina());
@@ -99,9 +99,9 @@ public class playermovment : MonoBehaviour
 
                 StartCoroutine(PerformDodge(dodgeDirection));
 
-                Stamina -= Dodge_Cost;
+                Stamina -= dodgeCost;
                 if (Stamina <= 0) Stamina = 0;
-                Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+                Stamina_Bar.fillAmount = Stamina / maxStamina;
 
                 if (recharge != null) StopCoroutine(recharge);
                recharge = StartCoroutine(ChargeStamina());
@@ -133,11 +133,11 @@ public class playermovment : MonoBehaviour
     private IEnumerator ChargeStamina()
     {
         yield return new WaitForSeconds(2f);
-        while(Stamina < Max_Stamina)
+        while(Stamina < maxStamina)
         {
-            Stamina += ChargeRate / 10f;
-            if (Stamina > Max_Stamina) Stamina = Max_Stamina;
-            Stamina_Bar.fillAmount = Stamina / Max_Stamina;
+            Stamina += chargeRate / 10f;
+            if (Stamina > maxStamina) Stamina = maxStamina;
+            Stamina_Bar.fillAmount = Stamina / maxStamina;
             yield return new WaitForSeconds(.1f);
 
             

@@ -11,8 +11,8 @@ public class Throw : MonoBehaviour
     public float projectileLifetime = 3f;
     playermovment Player;
     public float dmg = 10f;
-    public float AmmoNeeded;
-    public float AmmoAmount = 0;
+    public float ammoNeeded;
+    public float ammoAmount = 0;
 
 
     private float timer = 0f;
@@ -35,7 +35,7 @@ public class Throw : MonoBehaviour
             lastInputDirection = new Vector2(horizontal, vertical).normalized;
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && timer >= timeBetweenShots && Player.Stamina > 0 && AmmoAmount >= AmmoNeeded)
+        if (Input.GetKeyDown(KeyCode.Mouse0) && timer >= timeBetweenShots && Player.Stamina > 0 && ammoAmount >= ammoNeeded)
         {
             Shoot();
             timer = 0f;

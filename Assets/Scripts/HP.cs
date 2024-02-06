@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public Image HealthBar;
-    public Image HealthBar_Background;
-    public float Health_ammount = 100;
+    public Image healthBar;
+    public Image healthBarBackground;
+    public float healthAmmount = 100;
     public GameObject Player;
     public Rigidbody2D rB;
 
@@ -15,7 +15,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        Health_ammount = 100;
+        healthAmmount = 100;
         rB = GetComponent<Rigidbody2D>();
     }
 
@@ -35,7 +35,7 @@ public class PlayerHealth : MonoBehaviour
     //Death when HP = 0
     private void Update()
     {
-        if (Health_ammount <= 0)
+        if (healthAmmount <= 0)
         {
             Application.LoadLevel(Application.loadedLevel);
         }
@@ -48,18 +48,18 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(float Damage)
     {
         
-        Health_ammount -= Damage;      
-        HealthBar.fillAmount = Health_ammount / 100;
+        healthAmmount -= Damage;      
+        healthBar.fillAmount = healthAmmount / 100;
 
     }
 
     //Healing
     public void Heal(float health_points)
     {
-        Health_ammount += health_points;
-        Health_ammount = Mathf.Clamp(Health_ammount, 0, 100);
+        healthAmmount += health_points;
+        healthAmmount = Mathf.Clamp(healthAmmount, 0, 100);
 
-        HealthBar.fillAmount = Health_ammount / 100;
+        healthBar.fillAmount = healthAmmount / 100;
     }
 
    

@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    public GameObject Healing_item;
-    public Rigidbody2D Hrb;
+    public GameObject healingItem;
+    public Rigidbody2D healingRigidBody;
 
     public void Start()
     {
-        Hrb = GetComponent<Rigidbody2D>();
+        healingRigidBody = GetComponent<Rigidbody2D>();
         
     }
 
